@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Correo electronico</title>
+    </head>
+    <body>
+        <p>Estos son los empleados</p>
+        <ul>
+            <li th:each="empleado : ${empleados}">
+                <span th:text="${empleado}"></span>
+            </li>
+        </ul>
+    <span>En total tienes <span th:text="${empleados.size()}"></span> empleados</span><br>
+    <span th:if="${empleados.size() > 3}">
+        Tienes muchos empleados
+    </span>
+    </body>
+</html>
